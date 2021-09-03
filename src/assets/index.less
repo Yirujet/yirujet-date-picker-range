@@ -1,0 +1,110 @@
+/*滚动条样式：谷歌浏览器下*/
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    margin: 0 10px;
+}
+/*滚动条的轨道*/
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+/*滚动条的滑块按钮*/
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #05162a;
+}
+/*滚动条的上下两端的按钮*/
+::-webkit-scrollbar-button {
+    height: 0px;
+    background-color: transparent;
+}
+
+.absolute-circle-div(@width, @background: #1890fe, @top: 50%) {
+    position: absolute;
+    width: @width;
+    height: @width;
+    left: 50%;
+    top: @top;
+    transform: translate(-50%, -50%);
+    background-color: @background;
+    z-index: 1;
+    border-radius: 2px;
+}
+
+.xw-date-picker-popover {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #010811;
+    // border: 1px solid #00529e;
+    border-radius: 0px 0px 2px 2px;
+    z-index: 2000;
+    .content {
+        display: flex;
+        .left-part {
+            width: 284px;
+        }
+        .right-part {
+            flex: 1;
+            .time {
+                height: 300px;
+                overflow: auto;
+                .time-list {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    .time-item {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #ffffff;
+                        height: 20px;
+                        padding: 5px 0;
+                        &:hover {
+                            background-color: #1890ff;
+                            border-radius: 2px;
+                            cursor: default;
+                        }
+                        &.active {
+                            background-color: #1890ff;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.xw-select-popover {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #010811;
+    border: 1px solid #00529e;
+    border-radius: 0px 0px 2px 2px;
+    z-index: 2000;
+    border-top-width: 2px;
+    border-top-color: #1890ff;
+}
+
+.xw-option-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.relative-container {
+    display: flex;
+    /deep/input {
+        height: 32px !important;
+    }
+}
+.show-time {
+    /deep/input {
+        height: 32px !important;
+    }
+}
